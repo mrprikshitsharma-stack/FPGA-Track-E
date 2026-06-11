@@ -56,3 +56,16 @@ Therefore, the selected fixed-point format is:
 See:
 
 * ex2_sqnr_plot.png
+
+
+## 8-bit Resolution Calculation
+
+For WL = 8 bits:
+
+F = WL - 4 = 4
+
+Resolution = 2^(-F)
+           = 2^(-4)
+           = 0.0625
+
+Therefore, the smallest representable step size is 0.0625.
