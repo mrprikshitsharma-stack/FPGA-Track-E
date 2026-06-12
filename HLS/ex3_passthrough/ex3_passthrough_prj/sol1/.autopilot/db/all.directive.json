@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "passthrough_stream",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "passthrough_stream"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/osl/FPGA-Track-E/HLS/ex3_passthrough/run_hls.tcl",
+    "sourceLine": 10,
+    "success": true
+  }
+]

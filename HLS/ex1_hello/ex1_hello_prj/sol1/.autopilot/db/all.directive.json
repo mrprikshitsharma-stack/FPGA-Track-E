@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "passthrough",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "passthrough"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/osl/FPGA-Track-E/HLS/ex1_hello/run_hls.tcl",
+    "sourceLine": 13,
+    "success": true
+  }
+]

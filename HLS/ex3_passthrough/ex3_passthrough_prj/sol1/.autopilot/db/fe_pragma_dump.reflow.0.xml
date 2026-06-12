@@ -1,0 +1,16 @@
+<pragmas>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_strb_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_id_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_last_ptr" off="0" region="0" recursive="0"/>
+<pragma file="passthrough.cpp" line="14" pragmaType="pipeline" parentfunction="passthrough_stream" off="0" ii="1" rewind="0" style=""/>
+<pragma file="passthrough.cpp" line="8" pragmaType="interface" parentfunction="passthrough_stream" mode="axis" port="in_stream" register="0" register_mode="both" name="" depth="-1"/>
+<pragma file="passthrough.cpp" line="9" pragmaType="interface" parentfunction="passthrough_stream" mode="axis" port="out_stream" register="0" register_mode="both" name="" depth="-1"/>
+<pragma file="passthrough.cpp" line="10" pragmaType="interface" parentfunction="passthrough_stream" mode="s_axilite" port="n_samples" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="passthrough.cpp" line="11" pragmaType="interface" parentfunction="passthrough_stream" mode="s_axilite" port="" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_user_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_dest_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_data_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_keep_ptr" off="0" region="0" recursive="0"/>
+</pragmas>

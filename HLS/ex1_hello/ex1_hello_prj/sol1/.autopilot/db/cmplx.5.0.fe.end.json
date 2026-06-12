@@ -1,0 +1,11 @@
+{
+    "0": {
+        "name": "passthrough",
+        "file": "hello.cpp",
+        "fileloc": "1",
+        "instructions": "8",
+        "total_instructions": "8",
+        "calls": "",
+        "basicblocks": "1"
+    }
+}

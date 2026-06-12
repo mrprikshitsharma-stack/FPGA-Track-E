@@ -1,0 +1,19 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <name>
+        <value string="sol1"/>
+    </name>
+    <project>
+        <value string="ex3_passthrough_prj"/>
+    </project>
+    <flowTarget value="vivado"/>
+    <targetInfo>
+        <TargetInfo value="xc7z100:-ffg900:-2"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/zynq/zynq" name="DefaultPlatform"/>
+    </libraryList>
+    <clockList>
+        <clock default="false" name="default" period="10"/>
+    </clockList>
+</AutoPilot:solution>
+

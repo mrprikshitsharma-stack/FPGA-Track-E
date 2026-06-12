@@ -1,0 +1,17 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../tb_passthrough.cpp in debug mode
+   Compiling ../../../../passthrough.cpp in debug mode
+   Generating csim.exe
+out[0] = 0 (expected 0)
+out[1] = 100 (expected 100)
+out[2] = 200 (expected 200)
+out[3] = 300 (expected 300)
+out[4] = 400 (expected 400)
+out[5] = 500 (expected 500)
+out[6] = 600 (expected 600)
+out[7] = 700 (expected 700)
+Passthrough C-sim: PASS
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 8
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

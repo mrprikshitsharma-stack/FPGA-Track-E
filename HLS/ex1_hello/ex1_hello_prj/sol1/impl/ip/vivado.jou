@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri Jun 12 16:27:11 2026
+# Process ID: 2285
+# Current directory: /home/osl/FPGA-Track-E/HLS/ex1_hello/ex1_hello_prj/sol1/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/osl/FPGA-Track-E/HLS/ex1_hello/ex1_hello_prj/sol1/impl/ip/vivado.log
+# Journal file: /home/osl/FPGA-Track-E/HLS/ex1_hello/ex1_hello_prj/sol1/impl/ip/vivado.jou
+# Running On: osl-H410M-S2-V3, OS: Linux, CPU Frequency: 3600.000 MHz, CPU Physical cores: 4, Host memory: 16598 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace

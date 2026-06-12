@@ -1,0 +1,19 @@
+/home/osl/FPGA-Track-E/HLS/ex3_passthrough/run_hls.tcl:10:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=passthrough_stream_XLX_SEP_ PragmaOptions=name=passthrough_stream_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=passthrough_stream
+        ^
+passthrough.cpp:8:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=passthrough_stream_XLX_SEP_ PragmaOptions=axis port=in_stream_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=in_stream
+        ^
+passthrough.cpp:9:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=passthrough_stream_XLX_SEP_ PragmaOptions=axis port=out_stream_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=out_stream
+        ^
+passthrough.cpp:10:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=passthrough_stream_XLX_SEP_ PragmaOptions=s_axilite port=n_samples bundle=ctrl_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=n_samples bundle=ctrl
+        ^
+passthrough.cpp:11:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=passthrough_stream_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=ctrl_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=return bundle=ctrl
+        ^
+passthrough.cpp:14:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=passthrough_stream_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+6 warnings generated.

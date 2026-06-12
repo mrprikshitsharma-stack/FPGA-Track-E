@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="icmp_ln13_fu_120_p2" SOURCE="passthrough.cpp:13" VARIABLE="icmp_ln13" MODULE="passthrough_stream" LOOP="VITIS_LOOP_13_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0" USAGE="" STORAGESUBTYPE="" STORAGESIZE=""/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln13_fu_125_p2" SOURCE="passthrough.cpp:13" VARIABLE="add_ln13" MODULE="passthrough_stream" LOOP="VITIS_LOOP_13_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0" USAGE="" STORAGESUBTYPE="" STORAGESIZE=""/>
+	<BindNode BINDTYPE="adapter" DISPLAY="bind_adapter axilite" ID="" IMPL="" LATENCY="" OPTYPE="" PRAGMA="" RTLNAME="ctrl_s_axi_U" SOURCE="" VARIABLE="" MODULE="passthrough_stream" LOOP="" BUNDLEDNAME="ctrl" DSP="0" BRAM="0" URAM="0" USAGE="interface" STORAGESUBTYPE="s_axilite" STORAGESIZE=""/>
+</BindInfo>

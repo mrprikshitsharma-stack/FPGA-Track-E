@@ -1,0 +1,6 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/osl/FPGA-Track-E/HLS/ex1_hello/run_hls.tcl:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="passthrough" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=passthrough" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

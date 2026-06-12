@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "passthrough.cpp",
+    "fileloc": 3,
+    "instructions": 83,
+    "loads": {
+      "L": 4
+    },
+    "name": "passthrough_stream",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 83
+  }
+}

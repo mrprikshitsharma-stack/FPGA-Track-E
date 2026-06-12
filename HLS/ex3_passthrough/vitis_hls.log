@@ -1,0 +1,121 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+  **** SW Build 4023990 on Oct 11 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /home/Vivado/Vitis_HLS/2023.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/home/Vivado/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'osl' on host 'osl-H410M-S2-V3' (Linux_x86_64 version 5.15.0-67-generic) on Fri Jun 12 17:47:21 IST 2026
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/osl/FPGA-Track-E/HLS/ex3_passthrough'
+INFO: [HLS 200-2053] The vitis_hls executable is being deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script 'run_hls.tcl'
+INFO: [HLS 200-1510] Running: open_project ex3_passthrough_prj 
+INFO: [HLS 200-10] Opening project '/home/osl/FPGA-Track-E/HLS/ex3_passthrough/ex3_passthrough_prj'.
+INFO: [HLS 200-1510] Running: set_top passthrough_stream 
+INFO: [HLS 200-1510] Running: add_files passthrough.cpp 
+INFO: [HLS 200-10] Adding design file 'passthrough.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tb_passthrough.cpp 
+INFO: [HLS 200-10] Adding test bench file 'tb_passthrough.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution sol1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/osl/FPGA-Track-E/HLS/ex3_passthrough/ex3_passthrough_prj/sol1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z100-ffg900-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z100ffg900-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../tb_passthrough.cpp in debug mode
+   Compiling ../../../../passthrough.cpp in debug mode
+   Generating csim.exe
+out[0] = 0 (expected 0)
+out[1] = 100 (expected 100)
+out[2] = 200 (expected 200)
+out[3] = 300 (expected 300)
+out[4] = 400 (expected 400)
+out[5] = 500 (expected 500)
+out[6] = 600 (expected 600)
+out[7] = 700 (expected 700)
+Passthrough C-sim: PASS
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 8
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 2.36 seconds. CPU system time: 0.21 seconds. Elapsed time: 2.65 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 303.980 MB.
+INFO: [HLS 200-10] Analyzing design file 'passthrough.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.42 seconds. CPU system time: 0.25 seconds. Elapsed time: 2.7 seconds; current allocated memory: 305.438 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 120 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/osl/FPGA-Track-E/HLS/ex3_passthrough/ex3_passthrough_prj/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 83 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/osl/FPGA-Track-E/HLS/ex3_passthrough/ex3_passthrough_prj/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 70 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/osl/FPGA-Track-E/HLS/ex3_passthrough/ex3_passthrough_prj/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/osl/FPGA-Track-E/HLS/ex3_passthrough/ex3_passthrough_prj/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/osl/FPGA-Track-E/HLS/ex3_passthrough/ex3_passthrough_prj/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 70 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/osl/FPGA-Track-E/HLS/ex3_passthrough/ex3_passthrough_prj/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 70 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/osl/FPGA-Track-E/HLS/ex3_passthrough/ex3_passthrough_prj/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 70 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/osl/FPGA-Track-E/HLS/ex3_passthrough/ex3_passthrough_prj/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 70 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/osl/FPGA-Track-E/HLS/ex3_passthrough/ex3_passthrough_prj/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 135 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/osl/FPGA-Track-E/HLS/ex3_passthrough/ex3_passthrough_prj/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 143 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/osl/FPGA-Track-E/HLS/ex3_passthrough/ex3_passthrough_prj/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 134 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/osl/FPGA-Track-E/HLS/ex3_passthrough/ex3_passthrough_prj/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 78 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/osl/FPGA-Track-E/HLS/ex3_passthrough/ex3_passthrough_prj/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 78 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/osl/FPGA-Track-E/HLS/ex3_passthrough/ex3_passthrough_prj/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/osl/FPGA-Track-E/HLS/ex3_passthrough/ex3_passthrough_prj/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 44 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/osl/FPGA-Track-E/HLS/ex3_passthrough/ex3_passthrough_prj/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.77 seconds. CPU system time: 0.22 seconds. Elapsed time: 6.72 seconds; current allocated memory: 307.215 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 307.215 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 307.215 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 307.285 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 328.277 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 319.047 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'passthrough_stream' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'passthrough_stream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_13_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_13_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 320.402 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 320.402 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'passthrough_stream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'passthrough_stream/in_stream_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'passthrough_stream/in_stream_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'passthrough_stream/in_stream_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'passthrough_stream/in_stream_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'passthrough_stream/out_stream_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'passthrough_stream/out_stream_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'passthrough_stream/out_stream_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'passthrough_stream/out_stream_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'passthrough_stream/n_samples' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'passthrough_stream' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'n_samples' and 'return' to AXI-Lite port ctrl.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'passthrough_stream'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 320.402 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 323.809 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.21 seconds; current allocated memory: 327.465 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for passthrough_stream.
+INFO: [VLOG 209-307] Generating Verilog RTL for passthrough_stream.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 313.09 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4.71 seconds. CPU system time: 0.5 seconds. Elapsed time: 9.99 seconds; current allocated memory: 23.582 MB.
+INFO: [HLS 200-112] Total CPU user time: 8.7 seconds. Total CPU system time: 0.87 seconds. Total elapsed time: 14.3 seconds; peak allocated memory: 328.277 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Fri Jun 12 17:47:35 2026...
