@@ -1,0 +1,144 @@
+
+
+================================================================
+== Vitis HLS Report for 'logmel_Pipeline_READ'
+================================================================
+* Date:           Mon Jun 15 17:25:18 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        ex4_logmel
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z100-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.486 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      514|      514|  5.140 us|  5.140 us|  514|  514|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- READ    |      512|      512|         1|          1|          1|   512|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      22|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      36|    -|
+|Register         |        -|     -|      12|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|      12|      58|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1510|  2020|  554800|  277400|    0|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln20_fu_93_p2                 |         +|   0|  0|  10|          10|           1|
+    |icmp_ln20_fu_87_p2                |      icmp|   0|  0|  11|          10|          11|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   1|           1|           1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  22|          21|          13|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------+----+-----------+-----+-----------+
+    |          Name         | LUT| Input Size| Bits| Total Bits|
+    +-----------------------+----+-----------+-----+-----------+
+    |ap_done_int            |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_1   |   9|          2|   10|         20|
+    |i_fu_50                |   9|          2|   10|         20|
+    |in_stream_TDATA_blk_n  |   9|          2|    1|          2|
+    +-----------------------+----+-----------+-----+-----------+
+    |Total                  |  36|          8|   22|         44|
+    +-----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+----+----+-----+-----------+
+    |     Name    | FF | LUT| Bits| Const Bits|
+    +-------------+----+----+-----+-----------+
+    |ap_CS_fsm    |   1|   0|    1|          0|
+    |ap_done_reg  |   1|   0|    1|          0|
+    |i_fu_50      |  10|   0|   10|          0|
+    +-------------+----+----+-----+-----------+
+    |Total        |  12|   0|   12|          0|
+    +-------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+------------+----------------------+--------------+
+|     RTL Ports    | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk            |   in|    1|  ap_ctrl_hs|  logmel_Pipeline_READ|  return value|
+|ap_rst            |   in|    1|  ap_ctrl_hs|  logmel_Pipeline_READ|  return value|
+|ap_start          |   in|    1|  ap_ctrl_hs|  logmel_Pipeline_READ|  return value|
+|ap_done           |  out|    1|  ap_ctrl_hs|  logmel_Pipeline_READ|  return value|
+|ap_idle           |  out|    1|  ap_ctrl_hs|  logmel_Pipeline_READ|  return value|
+|ap_ready          |  out|    1|  ap_ctrl_hs|  logmel_Pipeline_READ|  return value|
+|in_stream_TVALID  |   in|    1|        axis|    in_stream_V_data_V|       pointer|
+|in_stream_TDATA   |   in|   16|        axis|    in_stream_V_data_V|       pointer|
+|in_stream_TREADY  |  out|    1|        axis|    in_stream_V_last_V|       pointer|
+|in_stream_TLAST   |   in|    1|        axis|    in_stream_V_last_V|       pointer|
+|in_stream_TKEEP   |   in|    2|        axis|    in_stream_V_keep_V|       pointer|
+|in_stream_TSTRB   |   in|    2|        axis|    in_stream_V_strb_V|       pointer|
+|frame_address0    |  out|    9|   ap_memory|                 frame|         array|
+|frame_ce0         |  out|    1|   ap_memory|                 frame|         array|
+|frame_we0         |  out|    1|   ap_memory|                 frame|         array|
+|frame_d0          |  out|   16|   ap_memory|                 frame|         array|
++------------------+-----+-----+------------+----------------------+--------------+
+
