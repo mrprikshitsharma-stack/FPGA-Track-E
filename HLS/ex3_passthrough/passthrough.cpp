@@ -11,7 +11,7 @@ void passthrough_stream(
 #pragma HLS INTERFACE s_axilite port=return bundle=ctrl
 
     for (int i = 0; i < n_samples; i++) {
-
+#pragma HLS PIPELINE II=1
         word_t w = in_stream.read();
         out_stream.write(w);
     }
