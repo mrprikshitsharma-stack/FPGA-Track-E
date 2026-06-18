@@ -1,0 +1,18 @@
+/* reports/ex6_device_tree_skeleton.dts */
+/* Generated from Exercise 6 CMA sizing calculation */
+
+/ {
+    reserved-memory {
+        #address-cells = <1>;
+        #size-cells = <1>;
+        ranges;
+
+        cma: cma@0 {
+            compatible = "shared-dma-pool";
+            reusable;
+            size = <0x00080000>;
+            alignment = <0x1000>;
+            linux,cma-default;
+        };
+    };
+};
