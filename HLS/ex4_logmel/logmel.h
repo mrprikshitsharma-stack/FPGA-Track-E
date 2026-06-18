@@ -2,7 +2,7 @@
 
 #include <ap_fixed.h>
 #include <hls_stream.h>
-#include <ap_axis.h>
+#include <ap_axi_sdata.h>
 
 const int FFT_N = 512;
 const int N_MELS = 40;
