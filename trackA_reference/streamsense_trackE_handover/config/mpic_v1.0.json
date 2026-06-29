@@ -1,0 +1,101 @@
+{
+  "version": "1.0",
+  "frozen": true,
+  "note": "Do not modify. Any change requires a version bump and Track A sign-off.",
+  "sample_rate_hz": 16000,
+  "frame_len_samples": 16000,
+  "padding": "zero-pad right OR crop right to exactly 16000 samples",
+  "channels": "mono \u2014 stereo input: mean across channels",
+  "n_fft": 512,
+  "hop_length": 160,
+  "n_mels": 64,
+  "center": false,
+  "power": 2.0,
+  "window": "hann_periodic",
+  "note_center_false": "center=False is CRITICAL \u2014 gives T=97 not T=98. (16000-512)/160+1 = 97",
+  "log_scale": "10 * log10(mel + 1e-10)",
+  "log_eps": 1e-10,
+  "clip_floor_db": -80.0,
+  "global_mean_db": -30.785545,
+  "global_std_db": 22.157099,
+  "normalisation": "(mel_db - global_mean_db) / global_std_db",
+  "mel_shape": [
+    64,
+    97
+  ],
+  "input_tensor_name": "input",
+  "input_tensor_shape": [
+    1,
+    1,
+    64,
+    97
+  ],
+  "input_tensor_dtype": "float32",
+  "layout": "row-major C order (numpy default)",
+  "err_version": "1.0",
+  "outputs": {
+    "logits": {
+      "name": "logits",
+      "shape": [
+        1,
+        10
+      ],
+      "dtype": "float32",
+      "description": "Raw classifier logits. Apply softmax externally for probabilities.",
+      "note_qonnx": "In the .qonnx graph, output[0] may have an auto-generated integer name. Access by index 0.",
+      "classes": {
+        "0": "yes",
+        "1": "no",
+        "2": "up",
+        "3": "down",
+        "4": "left",
+        "5": "right",
+        "6": "on",
+        "7": "off",
+        "8": "stop",
+        "9": "go"
+      }
+    },
+    "embedding": {
+      "name": "embedding",
+      "shape": [
+        1,
+        128
+      ],
+      "dtype": "float32",
+      "description": "Linear projection of 128-dim GAP feature vector. For Track C ANN fingerprint index.",
+      "note": "Embed head is Xavier-uniform initialised, NOT fine-tuned. For structural use only until QAT fine-tuning is complete.",
+      "note_qonnx": "In the .qonnx graph, output[1] may have an auto-generated integer name. Access by index 1."
+    },
+    "novelty_score": {
+      "name": "novelty_score",
+      "shape": [
+        1,
+        1
+      ],
+      "dtype": "float32",
+      "description": "1 - max(softmax(logits)). Open-set novelty score. Bounded [0, 1]. Higher = more out-of-distribution.",
+      "critical": "MUST remain 2-D [1,1]. Never squeeze to scalar [1] or [].",
+      "note_qonnx": "In the .qonnx graph, output[2] may have an auto-generated integer name. Access by index 2."
+    }
+  },
+  "gv_binary_spec": {
+    "dtype": "float32",
+    "endianness": "little-endian",
+    "layout": "row-major C order",
+    "shape_raw": [
+      16000
+    ],
+    "bytes_raw": 64000,
+    "shape_mel_norm": [
+      64,
+      97
+    ],
+    "bytes_mel_norm": 24832,
+    "load_example": "np.fromfile('GV_00_yes_norm.bin', dtype='<f4').reshape(1,1,64,97)"
+  },
+  "tolerance_same_impl": 0.0001,
+  "tolerance_cross_impl": 0.0005,
+  "gv1k_min_top1_rate": 0.9,
+  "reference_impl": "preprocessing/mel_pipeline.py -> preprocess(samples: np.ndarray) -> np.ndarray [1,1,64,97]"
+}

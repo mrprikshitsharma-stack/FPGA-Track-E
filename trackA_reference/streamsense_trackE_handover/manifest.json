@@ -1,0 +1,67 @@
+{
+  "package_name": "streamsense_trackE_handover",
+  "from_track": "A (Ksheeraja \u2014 Host Model, Preprocessing & Feature Engine)",
+  "to_track": "E (Prikshit \u2014 Acceleration Path / FINN Flow)",
+  "assembled_at": "2026-06-24 15:38:51",
+  "document": "OSL-PRG-2026-SE-WPA Rev 2.0 \u2014 Scope 2 QONNX Extension",
+  "mpic_version": "1.0",
+  "err_version": "1.0",
+  "models": {
+    "qonnx": {
+      "filename": "streamsense_multihead.qonnx",
+      "description": "Track E FINN flow target. Brevitas QAT, Int8 weights+activations.",
+      "heads": [
+        "logits [1,10]",
+        "embedding [1,128]",
+        "novelty_score [1,1]"
+      ],
+      "runtime": "qonnx executor (pip install qonnx). Do NOT use onnxruntime directly.",
+      "opset": 17,
+      "gv1k_gate": "\u226590.0% required \u2014 see evaluation/qonnx_evaluation_report.txt"
+    },
+    "fp32_multihead": {
+      "filename": "streamsense_multihead_fp32.onnx",
+      "description": "FP32 reference model. OnnxRuntime, named outputs.",
+      "heads": [
+        "logits [1,10]",
+        "embedding [1,128]",
+        "novelty_score [1,1]"
+      ],
+      "runtime": "onnxruntime (pip install onnxruntime).",
+      "opset": 17,
+      "accuracy": "95.97% top-1 on 5779 test samples (Speech Commands v2)",
+      "gv1k": "1000/1000 pipeline parity PASS"
+    }
+  },
+  "golden_vectors": {
+    "n_vectors": 10,
+    "set": "10 hand-picked GVs, one per class",
+    "raw_shape": [
+      16000
+    ],
+    "mel_shape": [
+      64,
+      97
+    ],
+    "dtype": "float32 little-endian row-major",
+    "bytes_raw": 64000,
+    "bytes_mel": 24832,
+    "top1_source": "FP32 multihead ONNX (canonical authority) \u2014 in manifest.json expected_top1_index"
+  },
+  "contents": [
+    "models/streamsense_multihead.qonnx",
+    "models/streamsense_multihead_fp32.onnx",
+    "golden_vectors/raw/  (10 .bin files)",
+    "golden_vectors/mel/  (10 .bin files)",
+    "golden_vectors/normalized/  (10 .bin files)",
+    "golden_vectors/manifest.json",
+    "preprocessing/mel_pipeline.py",
+    "config/class_labels.json",
+    "config/normalization_stats.json",
+    "config/mpic_v1.0.json",
+    "evaluation/qonnx_evaluation_report.txt",
+    "evaluation/multihead_onnx_evaluation_report.txt",
+    "manifest.json",
+    "README.md"
+  ]
+}

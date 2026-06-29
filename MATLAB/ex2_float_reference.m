@@ -50,3 +50,4 @@ feat_float = (log_spec - mean(log_spec)) / (std(log_spec) + 1e-6);
 disp(['Float feature range: ' num2str(min(feat_float)) ' to ' num2str(max(feat_float))]);
 
 save('D:\FPGA_Track_E\MATLAB\ex2_float_feat.mat', 'feat_float', 'sig_f');
+save('feat_float_ref.txt', 'feat_float', '-ascii');
