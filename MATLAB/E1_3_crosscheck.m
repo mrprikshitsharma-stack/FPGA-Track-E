@@ -16,7 +16,7 @@ clear; close all;
 fprintf('E1.3 - Cross-check All 10 Golden Vectors\n');
 fprintf('==========================================\n\n');
 
-DEPLOY = 'D:\FPGA-Track-E\deployment_package';
+DEPLOY = 'D:\FPGA-Track-E\golden_vectors_10_matlab';
 
 % ── MPIC v1.0 frozen parameters ──────────────────────────────────────
 SR          = 16000;
@@ -57,7 +57,7 @@ for i = 1:n_gv
     gv = gv_names{i};
     
     % ── Load raw audio ────────────────────────────────────────────────
-    fid = fopen(fullfile(DEPLOY,'golden_vectors','raw',[gv '.bin']),'rb');
+    fid = fopen(fullfile(DEPLOY,'raw',[gv '.bin']),'rb');
     raw = fread(fid, FRAME_LEN, 'float32')';
     fclose(fid);
     
@@ -88,12 +88,12 @@ for i = 1:n_gv
     sqnr    = 10 * log10(sig_pwr / (nse_pwr + 1e-12));
     
     % ── vs Track A golden ────────────────────────────────────────────
-    fid = fopen(fullfile(DEPLOY,'golden_vectors','mel',[gv '_mel.bin']),'rb');
-    mel_golden = single(reshape(fread(fid, N_MELS*97, 'float32'), 97, N_MELS))';
+    fid = fopen(fullfile(DEPLOY,'mel',[gv '_mel.bin']),'rb');
+    mel_golden = single(reshape(fread(fid, N_MELS*97, 'float32=>single'), [N_MELS, 97]));
     fclose(fid);
     
-    fid = fopen(fullfile(DEPLOY,'golden_vectors','normalized',[gv '_norm.bin']),'rb');
-    norm_golden = single(reshape(fread(fid, N_MELS*97, 'float32'), 97, N_MELS))';
+    fid = fopen(fullfile(DEPLOY,'normalized',[gv '_norm.bin']),'rb');
+    norm_golden = single(reshape(fread(fid, N_MELS*97, 'float32=>single'), [N_MELS, 97]));
     fclose(fid);
     
     mel_err  = max(abs(mel_db(:)     - mel_golden(:)));

@@ -1,0 +1,130 @@
+STREAMSENSE — verify_gv10_matlab.m
+Generated: 26-Jun-2026 15:50:50
+GV root  : C:\STREAMSENSE\golden_vectors_10_matlab
+
+
+------------------------------------------------------
+Verifying GV_00_yes  (class 0 — 'yes')
+  raw  : 64000 bytes  [OK  ]  (expected 64000)
+  mel  : 24832 bytes  [OK  ]  (expected 24832)
+  norm : 24832 bytes  [OK  ]  (expected 24832)
+  mel  range : [-68.75, 41.65] dB  [OK  ]
+  norm range : [-1.7135, 3.2690]
+  label: 0  [OK  ]
+  pipeline max_err norm : 2.28e-05  [OK  ]
+  pipeline max_err mel  : 5.05e-04  [FAIL]
+
+------------------------------------------------------
+Verifying GV_01_no  (class 1 — 'no')
+  raw  : 64000 bytes  [OK  ]  (expected 64000)
+  mel  : 24832 bytes  [OK  ]  (expected 24832)
+  norm : 24832 bytes  [OK  ]  (expected 24832)
+  mel  range : [-53.13, 39.03] dB  [OK  ]
+  norm range : [-1.0083, 3.1511]
+  label: 1  [OK  ]
+  pipeline max_err norm : 4.56e-05  [OK  ]
+  pipeline max_err mel  : 1.01e-03  [FAIL]
+
+------------------------------------------------------
+Verifying GV_02_up  (class 2 — 'up')
+  raw  : 64000 bytes  [OK  ]  (expected 64000)
+  mel  : 24832 bytes  [OK  ]  (expected 24832)
+  norm : 24832 bytes  [OK  ]  (expected 24832)
+  mel  range : [-78.34, 38.97] dB  [OK  ]
+  norm range : [-2.1461, 3.1483]
+  label: 2  [OK  ]
+  pipeline max_err norm : 4.59e-05  [OK  ]
+  pipeline max_err mel  : 1.02e-03  [FAIL]
+
+------------------------------------------------------
+Verifying GV_03_down  (class 3 — 'down')
+  raw  : 64000 bytes  [OK  ]  (expected 64000)
+  mel  : 24832 bytes  [OK  ]  (expected 24832)
+  norm : 24832 bytes  [OK  ]  (expected 24832)
+  mel  range : [-36.99, 40.78] dB  [OK  ]
+  norm range : [-0.2801, 3.2301]
+  label: 3  [OK  ]
+  pipeline max_err norm : 1.26e-05  [OK  ]
+  pipeline max_err mel  : 2.78e-04  [OK  ]
+
+------------------------------------------------------
+Verifying GV_04_left  (class 4 — 'left')
+  raw  : 64000 bytes  [OK  ]  (expected 64000)
+  mel  : 24832 bytes  [OK  ]  (expected 24832)
+  norm : 24832 bytes  [OK  ]  (expected 24832)
+  mel  range : [-78.14, 41.38] dB  [OK  ]
+  norm range : [-2.1372, 3.2568]
+  label: 4  [OK  ]
+  pipeline max_err norm : 1.26e-04  [OK  ]
+  pipeline max_err mel  : 2.79e-03  [FAIL]
+
+------------------------------------------------------
+Verifying GV_05_right  (class 5 — 'right')
+  raw  : 64000 bytes  [OK  ]  (expected 64000)
+  mel  : 24832 bytes  [OK  ]  (expected 24832)
+  norm : 24832 bytes  [OK  ]  (expected 24832)
+  mel  range : [-50.07, 39.09] dB  [OK  ]
+  norm range : [-0.8703, 3.1538]
+  label: 5  [OK  ]
+  pipeline max_err norm : 2.94e-05  [OK  ]
+  pipeline max_err mel  : 6.52e-04  [FAIL]
+
+------------------------------------------------------
+Verifying GV_06_on  (class 6 — 'on')
+  raw  : 64000 bytes  [OK  ]  (expected 64000)
+  mel  : 24832 bytes  [OK  ]  (expected 24832)
+  norm : 24832 bytes  [OK  ]  (expected 24832)
+  mel  range : [-51.06, 39.64] dB  [OK  ]
+  norm range : [-0.9151, 3.1787]
+  label: 6  [OK  ]
+  pipeline max_err norm : 1.94e-05  [OK  ]
+  pipeline max_err mel  : 4.31e-04  [OK  ]
+
+------------------------------------------------------
+Verifying GV_07_off  (class 7 — 'off')
+  raw  : 64000 bytes  [OK  ]  (expected 64000)
+  mel  : 24832 bytes  [OK  ]  (expected 24832)
+  norm : 24832 bytes  [OK  ]  (expected 24832)
+  mel  range : [-33.81, 40.96] dB  [OK  ]
+  norm range : [-0.1367, 3.2380]
+  label: 7  [OK  ]
+  pipeline max_err norm : 1.34e-05  [OK  ]
+  pipeline max_err mel  : 2.98e-04  [OK  ]
+
+------------------------------------------------------
+Verifying GV_08_stop  (class 8 — 'stop')
+  raw  : 64000 bytes  [OK  ]  (expected 64000)
+  mel  : 24832 bytes  [OK  ]  (expected 24832)
+  norm : 24832 bytes  [OK  ]  (expected 24832)
+  mel  range : [-41.91, 40.58] dB  [OK  ]
+  norm range : [-0.5023, 3.2210]
+  label: 8  [OK  ]
+  pipeline max_err norm : 1.18e-05  [OK  ]
+  pipeline max_err mel  : 2.62e-04  [OK  ]
+
+------------------------------------------------------
+Verifying GV_09_go  (class 9 — 'go')
+  raw  : 64000 bytes  [OK  ]  (expected 64000)
+  mel  : 24832 bytes  [OK  ]  (expected 24832)
+  norm : 24832 bytes  [OK  ]  (expected 24832)
+  mel  range : [-33.51, 41.37] dB  [OK  ]
+  norm range : [-0.1228, 3.2567]
+  label: 9  [OK  ]
+  pipeline max_err norm : 1.53e-05  [OK  ]
+  pipeline max_err mel  : 3.40e-04  [OK  ]
+
+======================================================
+SUMMARY
+======================================================
+  [FAIL]  GV_00_yes
+  [FAIL]  GV_01_no
+  [FAIL]  GV_02_up
+  [OK  ]  GV_03_down
+  [FAIL]  GV_04_left
+  [FAIL]  GV_05_right
+  [OK  ]  GV_06_on
+  [OK  ]  GV_07_off
+  [OK  ]  GV_08_stop
+  [OK  ]  GV_09_go
+
+[FAIL] One or more vectors failed — see details above.
